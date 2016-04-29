@@ -1,0 +1,24 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("XSS test app") {
+
+
+<a href="@routes.HomeController.testCase1("foo")">Test case 1</a><br/>
+<a href="@routes.HomeController.testCase2("foo")">Test case 2</a><br/>
+<a href="@routes.HomeController.testCase3("foo")">Test case 3</a><br/>
+<a href="@routes.HomeController.testCase4("foo")">Test case 4</a><br/>
+<a href="@routes.HomeController.testCase5("foo")">Test case 5</a><br/>
+<h3>Other test cases</h3>
+<a href="@routes.HomeController.fragmentXss()">Injection via fragment</a><br/>
+<a href="@routes.HomeController.hrefXss("foo")">Injection via href</a><br/>
+<a href="@routes.HomeController.imageOnLoadXss("javascript:alert('HI')")">Injection via image onload</a><br/>
+}

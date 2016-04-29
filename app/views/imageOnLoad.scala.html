@@ -1,0 +1,10 @@
+@(foo : String)
+
+<!doctype html>
+<html>
+  <body>
+    <h1>Injection via href property of the link</h1>
+ 
+    <img src="/assets/images/xssattack1.jpg" onload=@foo></img>
+  </body>
+</html>

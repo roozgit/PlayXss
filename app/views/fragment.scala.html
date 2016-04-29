@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <script>
+      function displayPic(num) {
+        // Dynamically load the appropriate image.
+        var html = "Fragment is " + parseInt(num) + "<br>";
+        html += "<img src='/assets/images/xssattack" + num + ".jpg' />";
+        document.getElementById("viewAreaContent").innerHTML=html;
+ 
+        window.location.hash = num;
+ 
+        }
+ 
+      window.onload = function() { 
+        displayPic(self.location.hash.substr(1) || "1");
+      }
+ 
+      // Extra code so that we can communicate with the parent page
+      window.addEventListener("message", function(event){
+        if (event.source == parent) {
+          displayPic(self.location.hash.substr(1));
+        }
+      }, false);
+    </script>
+ 
+  </head>
+  <body>
+    <h1>Injection via fragment</h1>
+ 
+    <a href="#1" onclick="displayPic('1')">Image 1</a>
+    <a href="#2" onclick="displayPic('2')">Image 2</a>
+    <div id="viewAreaContent"></div>
+  </body>
+</html>

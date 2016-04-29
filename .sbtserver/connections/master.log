@@ -1,0 +1,7 @@
+New log file opened at Sat Apr 23 19:41:27 MST 2016 by 4304@roozbit-v
+Taking next connection to: 42567
+New client attempting to connect on port: 49558-42567
+  Address = /127.0.1.1:42567
+This client on port 49558 has uuid 72e56fb8-ee30-4c8f-95e5-3fe988d8c5b2 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-72e56fb8-ee30-4c8f-95e5-3fe988d8c5b2
+Taking next connection to: 42567
