@@ -10,19 +10,19 @@ This is a simple web application with eight basic test cases for testing XSS inj
 To exploit: `/ui=<script>alert()</script>`
 
 2. TestCase 2: User input is used in double quote html id property of tag. Breaking out of tag is easy: `ui="><script>alert()</script>`
-3. 
+
 3. TestCase 3: User input is used directly in JS code. Exploit : ui="%3balert()//
-4. 
+ 
 4. TestCase 4: User input is used in id property of <p> tag with single quotes. To exploit: ui='><script>alert()</script>
-5. 
+
 5. TestCase 5: User input is used in property with no quotes. To exploit: ui=asdf onclick=alert()
-6. 
+ 
 6. fragmentTest: User input is used to select image via Javascript from fragment part of the URL. To exploit: #'onclick=alert() a.
 
 **Note:** This exploit will only work on Chrome.
 
 7. imageOnLoad: To exploit : ui=javascript:alert()
-8. 
+
 8. Link href exploit: ui=javascript:alert()
 
 ##Enable/disable Play's default encoding
