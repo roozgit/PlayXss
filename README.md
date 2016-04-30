@@ -18,7 +18,6 @@ To exploit: `/ui=<script>alert()</script>`
 5. TestCase 5: User input is used in property with no quotes. To exploit: ui=asdf onclick=alert()
  
 6. fragmentTest: User input is used to select image via Javascript from fragment part of the URL. To exploit: #'onclick=alert() a.
-
 **Note:** This exploit will only work on Chrome.
 
 7. imageOnLoad: To exploit : ui=javascript:alert()
