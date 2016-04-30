@@ -3,8 +3,10 @@
 <!doctype html>
 <html>
   <body>
-    <h1>Injection via href property of the link</h1>
+    <h1>Injection via image onload property</h1>
+    <p>Here the program uses user input in querystring to decide what to do on image load!</p>
  
     <img src="/assets/images/xssattack1.jpg" onload=@foo></img>
+    <a href="/">Back to home!</a>
   </body>
 </html>
